@@ -7,6 +7,9 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion"
 import { EditForm } from './components/EditForm'
+import { Navbar } from './components/Navbar'
+import { VerticalProfileComponent } from './components/VerticalProfileComponent'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 
 const App = () => {
@@ -16,7 +19,13 @@ const App = () => {
         Hello world!
       </h1>
       <Button >hello</Button> */}
-      <EditForm />
+      <BrowserRouter>
+        <Navbar />
+        <Routes>
+          <Route path="/edit" element={<EditForm />}></Route>
+          <Route path="/" element={<VerticalProfileComponent />}></Route>
+        </Routes>
+      </BrowserRouter>
     </div>
   )
 }

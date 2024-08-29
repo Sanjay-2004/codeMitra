@@ -1,10 +1,12 @@
 import React, { useState } from "react";
 import { EyeIcon } from '@heroicons/react/24/outline';
 import DragAndDropBox from "./DragAndDropBox";
+import { useNavigate } from "react-router-dom";
 
 export function EditForm() {
     const [showPassword1, setShowPassword1] = useState(false);
     const [showPassword2, setShowPassword2] = useState(false);
+    const nav = useNavigate();
     const togglePasswordVisibility1 = () => {
         setShowPassword1(!showPassword1);
     };
@@ -25,14 +27,14 @@ export function EditForm() {
     };
 
     const backToProfile = () => {
-
+        nav("/");
     };
-    
+
     return (
         <div className="flex items-center justify-around bg-stone-950 h-fit">
             <div className="flex flex-col p-8">
-                <button className="mb-16 w-[200px] bg-stone-900 text-slate-200 rounded-lg text-lg h-[45px] font-semibold border border-stone-800 flex items-center justify-center px-4 space-x-2 hover:bg-stone-800" onClick={backToProfile}>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="stroke-slate-200">
+                <button className="mt-16 mb-8 w-[200px] bg-stone-900 text-slate-200 rounded-lg text-xl h-[60px] font-semibold border border-stone-800 flex items-center justify-center px-4 space-x-2 hover:bg-stone-800" onClick={backToProfile}>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="stroke-slate-200">
                         <path d="M12 19L5 12l7-7"></path>
                         <path d="M19 12H5"></path>
                     </svg>
