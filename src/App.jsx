@@ -4,6 +4,7 @@ import { Navbar } from './components/Navbar'
 import VerticalProfileComponent from './components/VerticalProfileComponent'
 import Footer from './components/Footer'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import Profile from './pages/Profile'
 
 
 const App = () => {
@@ -12,7 +13,7 @@ const App = () => {
       <Navbar />
       <Routes>
         <Route path="/edit" element={<EditForm />} />
-        <Route path="/" element={<VerticalProfileComponent />} />
+        <Route path="/" element={<Profile />} />
       </Routes>
       <Footer />
     </BrowserRouter>

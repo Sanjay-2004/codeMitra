@@ -54,8 +54,8 @@ export default function VerticalProfileComponent() {
     };
 
     return (
-        <div className="bg-stone-950 min-h-screen text-slate-50 flex items-center justify-center pt-[80px]">
-            <div className="relative w-[500px] h-[900px] bg-stone-900 rounded-lg mb-32">
+        <>
+            <div className="relative w-1/3 h-[900px]  bg-stone-900 rounded-lg mb-32">
                 {/* Outer Circle */}
                 <div className="ml-[60px] absolute top-12 left-8 w-[300px] h-[300px] rounded-full flex items-center justify-center bg-stone-800">
                     {/* Inner Circle */}
@@ -149,37 +149,37 @@ export default function VerticalProfileComponent() {
                 </div>
 
                 {/* Divider */}
-                <div class="border-divider-3 dark:border-dark-divider-3 ml-[50px] mt-[-2px] w-[400px] border-b absolute top-[580px] left-0 w-[400px] border-stone-700"></div>
+                <div class="border-divider-3 dark:border-dark-divider-3 ml-[50px] mt-[-2px] border-b absolute top-[580px] left-0 w-[400px] border-stone-700"></div>
 
                 {/* Additional Boxes and Text */}
                 <div className="absolute top-[600px] left-12 space-y-6">
                     <div className="flex items-center space-x-4">
                         <div className="w-[60px] h-[60px] bg-stone-950 rounded-lg flex items-center justify-center">
-                        <img
-                            src={email} // your logo comes here
-                            alt="logo"
-                            className="w-[35px] h-[35px] object-contain opacity-60 transition ease-in-out delay-150 cursor-pointer"
-                        />
+                            <img
+                                src={email} // your logo comes here
+                                alt="logo"
+                                className="w-[35px] h-[35px] object-contain opacity-60 transition ease-in-out delay-150 cursor-pointer"
+                            />
                         </div>
                         <span className="text-xl font-semibold text-slate-300">Email: {userEmail}</span>
                     </div>
                     <div className="flex items-center space-x-4">
                         <div className="w-[60px] h-[60px] bg-stone-950 rounded-lg flex items-center justify-center">
-                        <img
-                            src={coding} // your logo comes here
-                            alt="logo"
-                            className="w-[35px] h-[35px] object-contain opacity-60 transition ease-in-out delay-150 cursor-pointer"
-                        />
+                            <img
+                                src={coding} // your logo comes here
+                                alt="logo"
+                                className="w-[35px] h-[35px] object-contain opacity-60 transition ease-in-out delay-150 cursor-pointer"
+                            />
                         </div>
                         <span className="text-xl font-semibold text-slate-300">Favourite language: {favLang}</span>
                     </div>
                     <div className="flex items-center space-x-4">
                         <div className="w-[60px] h-[60px] bg-stone-950 rounded-lg flex items-center justify-center">
-                        <img
-                            src={algo} // your logo comes here
-                            alt="logo"
-                            className="w-[45px] h-[45px] object-contain opacity-60 transition ease-in-out delay-150 cursor-pointer"
-                        />
+                            <img
+                                src={algo} // your logo comes here
+                                alt="logo"
+                                className="w-[45px] h-[45px] object-contain opacity-60 transition ease-in-out delay-150 cursor-pointer"
+                            />
                         </div>
                         <span className="text-xl font-semibold text-slate-300">Favourite algorithm: {favAlgo}</span>
                     </div>
@@ -209,6 +209,6 @@ export default function VerticalProfileComponent() {
                     </div>
                 </div>
             )}
-        </div>
+        </>
     );
 }
