@@ -1,7 +1,7 @@
 import React from 'react'
-import { EditForm } from './components/EditForm'
+import EditForm from './components/EditForm'
 import { Navbar } from './components/Navbar'
-import { VerticalProfileComponent } from './components/VerticalProfileComponent'
+import VerticalProfileComponent from './components/VerticalProfileComponent'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 
