@@ -186,28 +186,28 @@ export default function VerticalProfileComponent() {
                 </div>
 
                 {/* Dialog */}
-                {isDialogOpen && (
-                    <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
-                        <div className="relative bg-stone-900 text-slate-50 p-[8vh] rounded-lg shadow-lg w-[60vh] h-[43vh]">
-                            {/* Close Button */}
-                            <button
-                                className="absolute top-[2vh] right-[2vh] text-slate-400 text-[4vh] font-bold mr-[4vh] mt-[1.2vh] hover:text-slate-50"
-                                onClick={closeDialogHandler}
-                            >
-                                &times;
-                            </button>
-                            <h2 className="text-[4vh] font-bold mb-[8vh]">Contest Levels</h2>
-                            <ul className="list-disc pl-[2vh] text-[2vh]">
-                                <li className="pb-[2vh]">1-5 contests: 🐣 (Newbie)</li>
-                                <li className="pb-[2vh]">6-10 contests: 🌱 (Growing)</li>
-                                <li className="pb-[2vh]">11-20 contests: 🔥 (On Fire)</li>
-                                <li className="pb-[2vh]">21-50 contests: 📈 (Ascending)</li>
-                                <li className="pb-[2vh]">51-100 contests: 🦍 (Powerhouse)</li>
-                                <li>100+ contests: 👑 (Champion)</li>
-                            </ul>
-                        </div>
+            {isDialogOpen && (
+                <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+                    <div className="relative bg-stone-900 text-slate-50 p-8 rounded-lg shadow-lg w-[600px] h-[430px]">
+                        {/* Close Button */}
+                        <button
+                            className="absolute top-2 right-2 text-slate-400 text-4xl font-bold mr-4 mt-[12px] hover:text-slate-50"
+                            onClick={closeDialogHandler}
+                        >
+                            &times;
+                        </button>
+                        <h2 className="text-4xl font-bold mb-8">Contest Levels</h2>
+                        <ul className="list-disc pl-5 text-2xl">
+                            <li className="pb-4">1-5 contests: 🐣 (Newbie)</li>
+                            <li className="pb-4">6-10 contests: 🌱 (Growing)</li>
+                            <li className="pb-4">11-20 contests: 🔥 (On Fire)</li>
+                            <li className="pb-4">21-50 contests: 📈 (Ascending)</li>
+                            <li className="pb-4">51-100 contests: 🦍 (Powerhouse)</li>
+                            <li>100+ contests: 👑 (Champion)</li>
+                        </ul>
                     </div>
-                )}
+                </div>
+            )}
             </div>
         </div>
     );
