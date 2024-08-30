@@ -3,7 +3,7 @@ import { EyeIcon } from '@heroicons/react/24/outline';
 import DragAndDropBox from "./DragAndDropBox";
 import { Link, useNavigate } from "react-router-dom";
 
-export function EditForm() {
+export default function EditForm() {
     const [showPassword1, setShowPassword1] = useState(false);
     const [showPassword2, setShowPassword2] = useState(false);
     const nav = useNavigate();
