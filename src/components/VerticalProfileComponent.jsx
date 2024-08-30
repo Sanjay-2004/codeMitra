@@ -8,11 +8,10 @@ export default function VerticalProfileComponent() {
     };
 
     return (
-        <>
-            <div className="bg-stone-950 h-screen text-slate-50 flex items-center justify-center" onClick={editClickHandler}>
-                <div className="hover:underline cursor-pointer">
-                    Click Me
-                </div>
-            </div><Outlet /></>
+        <div className="bg-stone-950 h-screen text-slate-50 flex items-center justify-center" onClick={editClickHandler}>
+            <div className="hover:underline cursor-pointer">
+                Click Me
+            </div>
+        </div>
     )
 }
