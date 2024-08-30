@@ -78,12 +78,12 @@ export default function EditForm() {
                                             name="favorite-languages"
                                             className="mt-2 p-2 w-[350px] bg-stone-800 text-slate-200 rounded-lg border border-stone-700 focus:outline-none focus:ring-2 focus:ring-stone-600"
                                         >
+                                            <option value="c++">C++</option>
                                             <option value="javascript">JavaScript</option>
                                             <option value="python">Python</option>
                                             <option value="java">Java</option>
-                                            <option value="c++">C++</option>
-                                            <option value="c#">C#</option>
-                                            <option value="ruby">Ruby</option>
+                                            <option value="c#">C</option>
+                                            <option value="ruby">Rust</option>
                                             <option value="go">Go</option>
                                         </select>
                                     </div>
@@ -110,7 +110,7 @@ export default function EditForm() {
                             </div>
                         </div>
                     </div>
-                    <div class="border-divider-3 dark:border-dark-divider-3 mt-[-2px] w-[1200px] border-b"></div>
+                    <div class="border-divider-3 dark:border-dark-divider-3 mt-[-2px] w-[1200px] border-b border-stone-700"></div>
                     <div className="text-slate-50 bg-stone-900">
                         <div className="flex justify-between text-slate-50 bg-stone-900 rounded-lg mt-8 p-8">
                             <div className="text-3xl text-slate-50 ml-8 mr-[400px] font-bold">Social Links
@@ -199,7 +199,7 @@ export default function EditForm() {
                             </div>
                         </div>
                     </div>
-                    <div class="border-divider-3 dark:border-dark-divider-3 mt-[-2px] w-[1200px] border-b"></div>
+                    <div class="border-divider-3 dark:border-dark-divider-3 mt-[-2px] w-[1200px] border-b border-stone-700"></div>
                     <div className="text-slate-50 bg-stone-900 w-fit rounded-b-lg">
                         <div className="flex justify-between text-slate-50 bg-stone-900 mt-8 p-8 rounded-b-lg mb-8">
                             <div className="text-3xl text-slate-50 ml-8 mr-[164px] font-bold">Set Password
