@@ -153,7 +153,7 @@ export default function VerticalProfileComponent() {
 
                 {/* Additional Boxes and Text */}
                 <div className="absolute top-[60vh] left-[3vh] space-y-[3vh] mt-[3vh]">
-                    <div className="flex items-center space-x-[1vh]">
+                    <div className="flex items-center space-x-[2vh]">
                         <div className="w-[6vh] h-[6vh] bg-stone-950 rounded-lg flex items-center justify-center">
                             <img
                                 src={email} // your logo comes here
@@ -161,9 +161,9 @@ export default function VerticalProfileComponent() {
                                 className="w-[3.5vh] h-[3.5vh] object-contain opacity-60 transition ease-in-out delay-150 cursor-pointer"
                             />
                         </div>
-                        <span className="text-[2.5vh] font-semibold text-slate-300">Email: {userEmail}</span>
+                        <span className="text-[2vh] font-semibold text-stone-400">Email: <br /><span className="font-normal text-[2vh] text-secondary">{userEmail}</span></span>
                     </div>
-                    <div className="flex items-center space-x-[1vh]">
+                    <div className="flex items-center space-x-[2vh]">
                         <div className="w-[6vh] h-[6vh] bg-stone-950 rounded-lg flex items-center justify-center">
                             <img
                                 src={coding} // your logo comes here
@@ -171,9 +171,9 @@ export default function VerticalProfileComponent() {
                                 className="w-[3.5vh] h-[3.5vh] object-contain opacity-60 transition ease-in-out delay-150 cursor-pointer"
                             />
                         </div>
-                        <span className="text-[2.5vh] font-semibold text-slate-300">Favourite language: {favLang}</span>
+                        <span className="text-[2vh] font-semibold text-stone-400">Favourite language: <br /><span className="font-normal text-[2vh] text-secondary">{favLang}</span></span>
                     </div>
-                    <div className="flex items-center space-x-[1vh]">
+                    <div className="flex items-center space-x-[2vh]">
                         <div className="w-[6vh] h-[6vh] bg-stone-950 rounded-lg flex items-center justify-center">
                             <img
                                 src={algo} // your logo comes here
@@ -181,7 +181,7 @@ export default function VerticalProfileComponent() {
                                 className="w-[4.5vh] h-[4.5vh] object-contain opacity-60 transition ease-in-out delay-150 cursor-pointer"
                             />
                         </div>
-                        <span className="text-[2.5vh] font-semibold text-slate-300">Favourite algorithm: {favAlgo}</span>
+                        <span className="text-[2vh] font-semibold text-stone-400">Favourite algorithm: <br /><span className="font-normal text-[2vh] text-secondary">{favAlgo}</span></span>
                     </div>
                 </div>
 
