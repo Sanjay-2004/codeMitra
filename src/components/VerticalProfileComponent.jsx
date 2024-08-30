@@ -60,7 +60,7 @@ export default function VerticalProfileComponent() {
                 <div className="ml-[6vh] absolute top-[6vh] left-[4vh] w-[30vh] h-[30vh] rounded-full flex items-center justify-center bg-stone-800">
                     {/* Inner Circle */}
                     <div className="absolute right-0 bottom-0 w-[7vh] h-[7vh] rounded-full bg-stone-950 transform -translate-x-[20%] translate-y-[10%] flex items-center justify-center text-3xl cursor-pointer" onClick={emojiClickHandler}>
-                        <span className="text-4xl">{emoji}</span>
+                        <span className="text-[4vh]">{emoji}</span>
                     </div>
                 </div>
                 {/* Small Circle Overlapping Rectangle */}
