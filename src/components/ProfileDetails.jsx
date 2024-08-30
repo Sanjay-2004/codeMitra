@@ -2,7 +2,7 @@ import React from 'react'
 
 const ProfileDetails = ({ studentName, year, branch, attendedContests, currentRanking, preferredCodingLanguage, favouriteAlgo }) => {
     return (
-        <div className='w-2/3 bg-stone-900 p-10 text-lg'>
+        <div className=' bg-stone-900 p-10 text-lg'>
             <h1 className=' text-5xl'>{studentName}</h1>
             <h1 className=' text-5xl'>{year}</h1>
             <h1 className=' text-5xl'>{branch}</h1>

@@ -1,4 +1,5 @@
 /** @type {import('tailwindcss').Config} */
+const defaultTheme = require('tailwindcss/defaultTheme')
 module.exports = {
   darkMode: ["class"],
   content: [
@@ -13,10 +14,13 @@ module.exports = {
       center: true,
       padding: "2rem",
       screens: {
-        "2xl": "1400px",
+        ...defaultTheme.screens,
       },
     },
     extend: {
+      screens: {
+        '3xl': '2200px',
+      },
       keyframes: {
         "accordion-down": {
           from: { height: "0" },
