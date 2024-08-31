@@ -5,6 +5,7 @@ import VerticalProfileComponent from './components/VerticalProfileComponent'
 import Footer from './components/Footer'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Profile from './pages/Profile'
+import Calendar from './components/Calendar'
 
 
 const App = () => {
@@ -14,6 +15,7 @@ const App = () => {
       <Routes>
         <Route path="/edit" element={<EditForm />} />
         <Route path="/" element={<Profile />} />
+        <Route path="/contests" element={<Calendar />} />
       </Routes>
       <Footer />
     </BrowserRouter>

@@ -1,11 +1,19 @@
+import { useNavigate } from "react-router-dom";
+
 export function Navbar() {
     const isLoggedIn = false;
+    const nav = useNavigate();
+    const logoClickHandler = () => {
+        nav("/");
+    };
 
-    const logoClickHandler = () => {};
+    const rankingClickHandler = () => {
 
-    const rankingClickHandler = () => {};
+    };
 
-    const contestClickHandler = () => {};
+    const contestClickHandler = () => {
+        nav("/contests");
+    };
 
     const discussionClickHandler = () => {};
 
