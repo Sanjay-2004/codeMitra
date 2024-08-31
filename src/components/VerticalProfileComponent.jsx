@@ -73,8 +73,8 @@ export default function VerticalProfileComponent() {
                             xmlns="http://www.w3.org/2000/svg"
                             x="0px"
                             y="0px"
-                            width="3.5vh"
-                            height="3.5vh"
+                            width="3vh"
+                            height="3vh"
                             viewBox="0 0 32 32"
                             style={{ fill: '#FFFFFF' }}
                         >
