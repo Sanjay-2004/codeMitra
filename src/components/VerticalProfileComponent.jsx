@@ -54,18 +54,21 @@ export default function VerticalProfileComponent() {
     };
 
     return (
-        <div className="basis-1/3 ml-16 mr-4">
+        <div className=" basis-1/3 ml-16 mr-4">
             <div className="relative w-[50vh] h-[90vh]  bg-stone-900 rounded-lg mb-32">
                 {/* Outer Circle */}
                 <div className="ml-[6vh] absolute top-[6vh] left-[4vh] w-[30vh] h-[30vh] rounded-full flex items-center justify-center bg-stone-800">
                     {/* Inner Circle */}
+                    <img src={codechef} alt="Profile Pic"
+                        className="w-[29vh] h-[29vh] rounded-full object-cover"
+                    />
                     <div className="absolute right-0 bottom-0 w-[7vh] h-[7vh] rounded-full bg-stone-950 transform -translate-x-[20%] translate-y-[10%] flex items-center justify-center text-3xl cursor-pointer" onClick={emojiClickHandler}>
                         <span className="text-[4vh]">{emoji}</span>
                     </div>
                 </div>
                 {/* Small Circle Overlapping Rectangle */}
                 {isYourProfile && (
-                    <div className="absolute top-0 right-0 w-[6vh] h-[6vh] rounded-full bg-primary transform translate-x-[33%] -translate-y-[33%] flex items-center justify-center cursor-pointer hover:bg-primary/90" onClick={editClickHandler}>
+                    <div className="absolute top-0 right-0 w-12 h-12 rounded-full bg-primary translate-x-[33%] -translate-y-[33%] flex items-center justify-center cursor-pointer hover:bg-primary/90" onClick={editClickHandler}>
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
                             x="0px"
@@ -149,7 +152,7 @@ export default function VerticalProfileComponent() {
                 </div>
 
                 {/* Divider */}
-                <div class="border-divider-3 dark:border-dark-divider-3 ml-[5vh] mt-[2vh] border-b absolute top-[58vh] left-0 w-[40vh] border-stone-700"></div>
+                <div className="border-divider-3 dark:border-dark-divider-3 ml-[5vh] mt-[2vh] border-b absolute top-[58vh] left-0 w-[40vh] border-stone-700"></div>
 
                 {/* Additional Boxes and Text */}
                 <div className="absolute top-[60vh] left-[3vh] space-y-[3vh] mt-[3vh]">
@@ -186,28 +189,28 @@ export default function VerticalProfileComponent() {
                 </div>
 
                 {/* Dialog */}
-            {isDialogOpen && (
-                <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
-                    <div className="relative bg-stone-900 text-slate-50 p-8 rounded-lg shadow-lg w-[600px] h-[430px]">
-                        {/* Close Button */}
-                        <button
-                            className="absolute top-2 right-2 text-slate-400 text-4xl font-bold mr-4 mt-[12px] hover:text-slate-50"
-                            onClick={closeDialogHandler}
-                        >
-                            &times;
-                        </button>
-                        <h2 className="text-4xl font-bold mb-8">Contest Levels</h2>
-                        <ul className="list-disc pl-5 text-2xl">
-                            <li className="pb-4">1-5 contests: 🐣 (Newbie)</li>
-                            <li className="pb-4">6-10 contests: 🌱 (Growing)</li>
-                            <li className="pb-4">11-20 contests: 🔥 (On Fire)</li>
-                            <li className="pb-4">21-50 contests: 📈 (Ascending)</li>
-                            <li className="pb-4">51-100 contests: 🦍 (Powerhouse)</li>
-                            <li>100+ contests: 👑 (Champion)</li>
-                        </ul>
+                {isDialogOpen && (
+                    <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+                        <div className="relative bg-stone-900 text-slate-50 p-8 rounded-lg shadow-lg w-[600px] h-[430px]">
+                            {/* Close Button */}
+                            <button
+                                className="absolute top-2 right-2 text-slate-400 text-4xl font-bold mr-4 mt-[12px] hover:text-slate-50"
+                                onClick={closeDialogHandler}
+                            >
+                                &times;
+                            </button>
+                            <h2 className="text-4xl font-bold mb-8">Contest Levels</h2>
+                            <ul className="list-disc pl-5 text-2xl">
+                                <li className="pb-4">1-5 contests: 🐣 (Newbie)</li>
+                                <li className="pb-4">6-10 contests: 🌱 (Growing)</li>
+                                <li className="pb-4">11-20 contests: 🔥 (On Fire)</li>
+                                <li className="pb-4">21-50 contests: 📈 (Ascending)</li>
+                                <li className="pb-4">51-100 contests: 🦍 (Powerhouse)</li>
+                                <li>100+ contests: 👑 (Champion)</li>
+                            </ul>
+                        </div>
                     </div>
-                </div>
-            )}
+                )}
             </div>
         </div>
     );
