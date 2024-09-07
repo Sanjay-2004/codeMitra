@@ -7,7 +7,7 @@ const Profile = () => {
     return (
         <div className='flex bg-stone-950 h-[100vh] justify-around pt-12'>
             <VerticalProfileComponent />
-            <div className="basis-[85%] mr-8 flex flex-col">
+            <div className="basis-[97%] mr-8 flex flex-col">
                 <ProfileDetails
                     studentName="Sanjay Agamamidi"
                     year="4th"
