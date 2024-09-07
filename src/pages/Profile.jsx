@@ -1,4 +1,5 @@
 import ProfileDetails from '@/components/ProfileDetails'
+import UserGraph from '@/components/UserGraph'
 import VerticalProfileComponent from '@/components/VerticalProfileComponent'
 import React from 'react'
 
@@ -13,7 +14,7 @@ const Profile = () => {
                     branch="CSE"
                     attendedContests="20"
                     currentRanking="1" />
-                {/* <UserGraph /> */}
+                <UserGraph />
             </div>
 
         </div>

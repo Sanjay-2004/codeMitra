@@ -10,14 +10,14 @@ const ProfileDetails = ({ contestLevel = "newbie", studentName, year, branch, at
             </div>
             <p className='text-stone-200 font-semibold text-2xl'>
                 <span className='text-stone-600 font-medium text-lg'>Current Rank: </span># {currentRanking}</p>
-            <div className="flex justify-start gap-3 items-center">
+            <div className="flex justify-start gap-5 items-center">
                 <p className='text-stone-200 font-semibold text-2xl'>
                     <span className='text-stone-600 font-medium text-lg'>Year: </span> {year}</p>
                 <p className='text-stone-200 font-semibold text-2xl'>
                     <span className='text-stone-600 font-medium text-lg'>Branch: </span>{branch}</p>
             </div>
             <p className='text-stone-200 font-semibold text-2xl'>
-                <span className='text-stone-600 font-medium text-lg'>Contests Attended: </span>{attendedContests}</p>
+                <span className='text-stone-600 font-medium text-lg'>Contests Attended: </span> {` `}{attendedContests}</p>
         </div>
     )
 }

@@ -8,20 +8,20 @@ export function Navbar() {
     };
 
     const rankingClickHandler = () => {
-
+        nav("/ranking");
     };
 
     const contestClickHandler = () => {
         nav("/contests");
     };
 
-    const discussionClickHandler = () => {};
+    const discussionClickHandler = () => { };
 
-    const profileClickHandler = () => {};
+    const profileClickHandler = () => { };
 
-    const signinClickHandler = () => {};
+    const signinClickHandler = () => { };
 
-    const signupClickHandler = () => {};
+    const signupClickHandler = () => { };
 
     return (
         <>
@@ -30,22 +30,20 @@ export function Navbar() {
                     CodeMitra
                 </div>
                 <div className="flex justify-between">
-                    <div className="m-8 text-primary cursor-pointer hover:underline text-2xl font-medium" onClick={rankingClickHandler}>
+                    <div className="m-8 text-secondary cursor-pointer hover:underline text-2xl" onClick={rankingClickHandler}>
                         Rankings
                     </div>
-                    <div className="m-8 text-secondary cursor-pointer hover:underline text-2xl text-medium" onClick={contestClickHandler}>
+                    <div className="m-8 text-secondary cursor-pointer hover:underline text-2xl" onClick={contestClickHandler}>
                         Contests
                     </div>
-                    <div className="m-8 text-secondary cursor-pointer hover:underline text-2xl text-medium" onClick={discussionClickHandler}>
+                    <div className="m-8 text-secondary cursor-pointer hover:underline text-2xl" onClick={discussionClickHandler}>
                         Discussions
                     </div>
                 </div>
                 <div className="flex justify-between mr-16 text-xl cursor-pointer">
                     {isLoggedIn ? (
                         <div className="flex items-center justify-center cursor-pointer rounded-full h-[65px] w-[65px] hover:bg-stone-800">
-                            <div className="cursor-pointer bg-primary rounded-full h-[52px]  w-[52px] flex items-center justify-center text-slate-50" onClick={profileClickHandler}>
-                                P
-                            </div>
+                            <div className="cursor-pointer bg-primary rounded-full h-[52px]  w-[52px] flex items-center justify-center text-slate-50" onClick={profileClickHandler} />
                         </div>
                     ) : (
                         <div className="flex items-center justify-between">
