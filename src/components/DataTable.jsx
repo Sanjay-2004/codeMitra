@@ -1,4 +1,4 @@
-import * as React from "react"
+import * as React from "react";
 import {
     flexRender,
     getCoreRowModel,
@@ -7,9 +7,7 @@ import {
     getSortedRowModel,
     getFilteredRowModel,
 } from "@tanstack/react-table";
-
 import { Input } from "./ui/input";
-
 import {
     Table,
     TableBody,
@@ -18,12 +16,11 @@ import {
     TableHeader,
     TableRow,
 } from "@/components/ui/table";
-
 import { Button } from "./ui/button";
 
 const DataTable = ({ columns, data }) => {
-    const [sorting, setSorting] = React.useState([])
-    const [columnFilters, setColumnFilters] = React.useState([])
+    const [sorting, setSorting] = React.useState([]);
+    const [columnFilters, setColumnFilters] = React.useState([]);
     const table = useReactTable({
         data,
         columns,
@@ -36,19 +33,19 @@ const DataTable = ({ columns, data }) => {
         state: {
             sorting,
             columnFilters,
-        }
+        },
     });
 
     return (
         <>
             <div className="flex items-center py-4">
                 <Input
-                    placeholder="Filter emails..."
-                    value={(table.getColumn("email")?.getFilterValue()) ?? ""}
+                    placeholder="Filter names..."
+                    value={(table.getColumn("name")?.getFilterValue()) ?? ""}
                     onChange={(event) =>
-                        table.getColumn("email")?.setFilterValue(event.target.value)
+                        table.getColumn("name")?.setFilterValue(event.target.value)
                     }
-                    className="max-w-sm"
+                    className="max-w-sm text-stone-50 text-base bg-stone-900"
                 />
             </div>
             <div className="rounded-md border">
@@ -96,6 +93,7 @@ const DataTable = ({ columns, data }) => {
             <div className="flex items-center justify-end space-x-2 py-4">
                 <Button
                     variant="outline"
+                    className="text-black"
                     size="sm"
                     onClick={() => table.previousPage()}
                     disabled={!table.getCanPreviousPage()}
@@ -104,6 +102,7 @@ const DataTable = ({ columns, data }) => {
                 </Button>
                 <Button
                     variant="outline"
+                    className="text-black"
                     size="sm"
                     onClick={() => table.nextPage()}
                     disabled={!table.getCanNextPage()}

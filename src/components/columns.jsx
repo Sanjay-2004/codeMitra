@@ -1,4 +1,3 @@
-// import { ColumnDef } from "@tanstack/react-table";
 import { MoreHorizontal } from "lucide-react";
 import { Button } from "./ui/button";
 import { ArrowUpDown } from "lucide-react";
@@ -13,70 +12,95 @@ import {
 
 export const columns = [
   {
-    accessorKey: "status",
-    header: () => <div className="text-left">Status</div>,
-    cell: ({ row }) => {
-      const status = row.getValue("status");
-      return <div className="text-left font-medium">{status}</div>;
-    },
-  },
-  {
-    accessorKey: "email",
+    accessorKey: "rank",
     header: ({ column }) => {
       return (
         <Button
           variant="ghost"
+          className="text-white"
           onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
         >
-          Email
+          Rank
           <ArrowUpDown className="ml-2 h-4 w-4" />
         </Button>
-      )
+      );
     },
     cell: ({ row }) => {
-      const email = row.getValue("email");
-      return <div className="text-left">{email}</div>;
-    },
-  },
-  {
-    accessorKey: "amount",
-    header: () => <div className="text-right">Amount</div>,
-    cell: ({ row }) => {
-      const amount = parseFloat(row.getValue("amount"));
-      const formatted = new Intl.NumberFormat("en-US", {
-        style: "currency",
-        currency: "USD",
-      }).format(amount);
-
-      return <div className="text-right font-medium">{formatted}</div>;
+      const rank = row.getValue("rank");
+      return <div className="text-left font-medium">{rank}</div>;
     },
   },
   {
-    id: "actions",
+    accessorKey: "name",
+    header: () => <div className="text-white text-left">Name</div>,
     cell: ({ row }) => {
-      const payment = row.original
-
+      const name = row.getValue("name");
+      return <div className="text-left">{name}</div>;
+    },
+  },
+  {
+    accessorKey: "contests",
+    header: () => <div className="text-white text-left">Contests</div>,
+    cell: ({ row }) => {
+      const contests = row.getValue("contests");
+      return <div className="text-left">{contests}</div>;
+    },
+  },
+  {
+    accessorKey: "leetcode",
+    header: ({ column }) => {
       return (
-        <DropdownMenu>
-          <DropdownMenuTrigger asChild>
-            <Button variant="ghost" className="h-8 w-8 p-0">
-              <span className="sr-only">Open menu</span>
-              <MoreHorizontal className="h-4 w-4" />
-            </Button>
-          </DropdownMenuTrigger>
-          <DropdownMenuContent align="end">
-            <DropdownMenuLabel>Actions</DropdownMenuLabel>
-            <DropdownMenuItem
-              onClick={() => navigator.clipboard.writeText(payment.id)}
-            >
-              Copy payment ID
-            </DropdownMenuItem>
-            <DropdownMenuSeparator />
-            <DropdownMenuItem>View customer</DropdownMenuItem>
-            <DropdownMenuItem>View payment details</DropdownMenuItem>
-          </DropdownMenuContent>
-        </DropdownMenu>
-      )
+        <Button
+          variant="ghost"
+          className="text-white"
+          onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
+        >
+          LC Rating
+          <ArrowUpDown className="ml-2 h-4 w-4" />
+        </Button>
+      );
+    },
+    cell: ({ row }) => {
+      const lcRating = row.getValue("leetcode");
+      return <div className="text-left ms-10">{lcRating}</div>;
+    },
+  },
+  {
+    accessorKey: "codechef",
+    header: ({ column }) => {
+      return (
+        <Button
+          variant="ghost"
+          className="text-white"
+          onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
+        >
+          CC Rating
+          <ArrowUpDown className="ml-2 h-4 w-4" />
+        </Button>
+      );
+    },
+    cell: ({ row }) => {
+      const ccRating = row.getValue("codechef");
+      return <div className="text-left ms-10">{ccRating}</div>;
+    },
+  },
+  {
+    accessorKey: "codeforces",
+    header: ({ column }) => {
+      return (
+        <Button
+          variant="ghost"
+          className="text-white"
+          onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
+        >
+          CF Rating
+          <ArrowUpDown className="ml-2 h-4 w-4" />
+        </Button>
+      );
+    },
+    cell: ({ row }) => {
+      const cfRating = row.getValue("codeforces");
+      return <div className="text-left ms-10">{cfRating}</div>;
     },
   },
 ];
