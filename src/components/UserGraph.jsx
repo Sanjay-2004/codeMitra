@@ -1,6 +1,5 @@
-
-import { TrendingUp } from "lucide-react"
-import { Area, AreaChart, CartesianGrid, XAxis, ResponsiveContainer } from "recharts"
+import { useState, useEffect } from "react";
+import { Area, AreaChart, CartesianGrid, XAxis, ResponsiveContainer } from "recharts";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import {
     Card,
@@ -8,15 +7,14 @@ import {
     CardDescription,
     CardHeader,
     CardTitle,
-} from "@/components/ui/card"
+} from "@/components/ui/card";
 import {
     ChartContainer,
     ChartTooltip,
     ChartTooltipContent,
-} from "@/components/ui/chart"
-import { useState } from "react"
+} from "@/components/ui/chart";
 
-export const description = "A simple area chart"
+export const description = "A simple area chart";
 
 const datasets = {
     Contests: [
@@ -53,15 +51,31 @@ const datasets = {
     ],
 };
 
-const chartConfig = {
-    desktop: {
-        label: "Contest",
-        color: "hsl(var(--chart-4))",
-    },
-}
+const colorMap = {
+    Contests: "hsl(var(--chart-1))",
+    LeetCode: "hsl(var(--chart-2))",
+    CodeChef: "hsl(var(--chart-3))",
+    CodeForces: "hsl(var(--chart-4))",
+};
 
 export default function Component({ name = "Sanjay" }) {
-    const [selected, setSelected] = useState("Contests")
+    const [selected, setSelected] = useState("Contests");
+    const [chartConfig, setChartConfig] = useState({
+        desktop: {
+            label: "Contest",
+            color: colorMap["Contests"],
+        },
+    });
+
+    useEffect(() => {
+        setChartConfig({
+            desktop: {
+                label: "Contest",
+                color: colorMap[selected],
+            },
+        });
+    }, [selected]);
+
     return (
         <Card className="h-96 w-full bg-stone-900 border-0 px-3 mt-5 overflow-hidden"> {/* Ensure full height and prevent overflow */}
             <CardHeader className="flex-row justify-between">
@@ -107,14 +121,14 @@ export default function Component({ name = "Sanjay" }) {
                             <Area
                                 dataKey="desktop"
                                 type="natural"
-                                fill="var(--color-desktop)"
+                                fill={chartConfig.desktop.color}
                                 fillOpacity={0.4}
-                                stroke="var(--color-desktop)"
+                                stroke={chartConfig.desktop.color}
                             />
                         </AreaChart>
                     </ResponsiveContainer>
                 </ChartContainer>
             </CardContent>
         </Card>
-    )
+    );
 }
